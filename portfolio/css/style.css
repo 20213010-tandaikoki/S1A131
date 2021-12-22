@@ -619,3 +619,15 @@ li {
     padding: 50px 0;
   }
 }
+
+.skill-img .active {
+  position: relative;
+  width: 60px;
+  height: auto;
+  margin-right: 20px;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.skill-img:hover .active { opacity: 1;}
