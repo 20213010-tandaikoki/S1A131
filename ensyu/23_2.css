@@ -32,15 +32,13 @@ dd {
   flex: 2 1 30px;
   margin-left: 0;
 }
-input[type="text"],textarea {
+input[type="text"], textarea {
   border: 1px solid #999;
   width: 100%;
   padding: 10px;
   border-radius: 5px;
 }
-.job {
-  margin-right: 8em;
-}
+.job {margin-right: .8em;}
 select {
   background: #fff;
   width: 100%;
@@ -51,10 +49,8 @@ select {
 textarea {
   height: 5em;
 }
-.btn {
-  text-align: center;
-}
-input[tyep="submit"] {
+.btn {text-align: center;}
+input[type="submit"] {
   background: #00a;
   border: none;
   width: 100%;
@@ -64,17 +60,11 @@ input[tyep="submit"] {
   font-size: 14px;
 }
 @media screen and (max-width: 768px){
-  .formltem {
-    display: block;
-  }
+  .formltem {display: block;}
   dt {
     text-align: left;
     margin-bottom: 4px;
   }
-  dd {
-    margin-left: 0;
-  }
-  .job {
-    margin-right: 8em;
-  }
+  dd {margin-left: 0;}
+  .job {margin-right: .8em;}
 }

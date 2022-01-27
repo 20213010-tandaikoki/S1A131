@@ -38,7 +38,7 @@ select {
 textarea {
   height: 8em;
 }
-input[tyep="submit"] {
+input[type="submit"] {
   background: #ef626c;
   border: none;
   width: 100%;
