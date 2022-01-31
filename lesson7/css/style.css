@@ -127,10 +127,12 @@ address {
   max-width: 1000px;
   margin: 50px auto;
   padding: 0 10px;
+  margin-bottom: 100px;
 }
 /* 見出し（h2） */
 .heading-section {
   text-align: center;
+  margin-bottom: 50px;
 }
 /* トップページ横並び要素の見出し（h3） */
 .heading-topic {
@@ -145,11 +147,13 @@ address {
   color: #032559;
   text-align: center;
   background: url("../img/footer_bg.png") center center / cover no-repeat;
+  padding: 50px 0 20px;
   /* 背景画像の指定 */
 }
 /* フッターロゴ */
 .footer-logo {
   margin-bottom: 10px;
+  margin: 30px 0;
 }
 /* 連絡先 */
 .footer-address {
@@ -272,19 +276,24 @@ textarea {
 }
 
 /* 入力欄が:focus（入力状態）のとき */
-
-  
-  
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus{
+  border-color: #032559;
+  outline: none;
+}
 
 /* 送信ボタン */
-
-  
-  
-  
+button[type="submit"] {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
 /* 送信ボタンが:hoverのとき */
-
-  
+button[type="submit"]:hover {
+  opacity: 0.65;
+}
 
 /* --------------------------------------------------
   幅768px未満のスタイル指定 ここまで
@@ -296,18 +305,18 @@ textarea {
 @media screen and (min-width: 768px) {
   /* ヘッダー */
   .header {
-    
+    padding: 40px 0 0;
   }
   /* ロゴ */
   .logo {
-    
-    
-    
-    
+    width: auto;
+    margin: 0 0 20px;
+    padding: 0;
+    text-align: center;
   }
   /* ハンバーガーボタン */
   .btn-burger {
-    
+    display: none;
     /* 768px以上では使用しない */
   }
   /* ナビゲーション */
@@ -316,16 +325,16 @@ textarea {
   }
   .nav-list {
     /* flexbox（横並びにする要素の親に指定） */
-    
+    display: flex;
     /* フレックスアイテムを主軸方向（横方向）中央揃えで配置 */
-    
+    justify-content: center;
     /* フレックスアイテムを交差軸方向（縦方向）中央揃えで配置 */
-    
+    align-items: center;
     padding: 0;
   }
   .nav-list li {
     /* フレックスアイテムに対する指定 */
-    
+    flex: 0 1 auto;
     padding: 0 20px;
     line-height: 1;
     border-right: 1px solid #fff;
@@ -337,7 +346,7 @@ textarea {
   }
   /* 幅768px未満でメニューを開いた状態から、ウィンドウ幅を768px以上に広げたとき、メニューにflexboxを適用して<li>を横並び表示に切り替える */
   .nav-toggle:checked~.nav .nav-list {
-    
+    display: flex;
   }
   /* セクション */
   .section {
@@ -365,13 +374,12 @@ textarea {
   /* 横並び */
   .row {
     /* flexbox（横並びにする要素の親に指定） */
-    
-    
+    display: flex;
+    justify-content: space-between;
   }
   /* 横並び要素 */
   .col {
-    /* フレックスアイテムに対する指定 */
-    
+    flex: 0 1 32%;
     margin: 0;
   }
   /* --------------------------------------------------
@@ -379,11 +387,11 @@ textarea {
   -------------------------------------------------- */
   /* 入場料（テーブル） */
   .price-table {
-    
+    font-size: 16px;
   }
   /* <th>と<td>に対する指定 */
   .price-table th, .price-table td {
-    
+    padding: 20px;
   }
   /* --------------------------------------------------
   お問い合わせフォーム
@@ -391,23 +399,23 @@ textarea {
   /* フォームの3つのブロックに対する指定 */
   .form-group {
     /* flexbox（横並びにする要素の親に指定） */
-    
-    
+    display: flex;
+    max-width: 800px;
     /* 横幅の最大値 */
     margin-bottom: 10px;
   }
   /* 項目名に対する指定 */
   .form-label {
     /* フレックスアイテムに対する指定 */
-    
-    
+    flex: 0 0 12em;
+    max-width: 12em;
     margin: 0;
     padding-top: 5px;
   }
   /* 入力欄を囲む<div>に対する指定 */
   .form-col {
     /* フレックスアイテムに対する指定 */
-    
+    flex: 0 1 100%;
   }
 }
 /* --------------------------------------------------
